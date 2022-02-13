@@ -7,42 +7,33 @@
     <meta name="description" content="Week 3 bio assignment for SE-111, 2/4/2022">
     
     <title>W3 | Multi-Page Bio </title>
+    <!-- SCHOOLS PAGE -->
 
     <!--in-document styling to showcase id and class power-->
     <style>
-
+        div{
+            border:2px solid black; padding:12px;margin:10px
+        }
         h1 {
-
             /*border:1px solid blue;*/
             text-align:center;
             color:rgb(0, 0, 0);
-
         }
-
         .border {
-
-            border:1px solid black;
+            border:2px solid black;
             margin-bottom:10px;
         }
-
         #nav {
-
-            border:1px solid rgb(0, 0, 0);
+            border:2px solid rgb(0, 0, 0);
             text-align:center;
-            
         }
-
         #wrapper {
-
             width:900px;
             margin:auto;/*adds equal space to left and right sides, requires a width value applied*/
         }
-
         .bg-main {
-
             background-color:white;
         }
-
         .link {
 
             font-size:26px;
@@ -54,6 +45,10 @@
 
             text-align:center;
         }
+        body{
+            text-align: center;
+        }
+
     </style>
 
 </head>
@@ -64,12 +59,12 @@
 
         <!--header is content that loads first/at top of page-->
         <!--header is usually a banner image or logo-->
+
         <div id="header" class="border bg-main">
 
             <!--name of the page-->
-            <h1 id="title">ABOUT PAGE</h1>
+            <h1 id="title">SCHOOLS</h1>
             <!--h1 tags should only be used 1 time in a page-->
-
 
         </div><!--/ #header-->
 
@@ -84,17 +79,20 @@
 
         </div><!--/ #nav-->
 
-        <!--main page content -- this usualy changes from page to page-->
+        
         <div id="content" class="border">
-
             
-            <h1 style="text-align: center;">Schools</h2>
-            <p style="text-align: center;"> 
+            <h1>Schools</h1>
+                <img src="images/school_ye.jpg" alt="School picture" style="width:20%">
+
+            <p style="font-size:20px">
+
                 Saint Francis Elementary School<br>
                 <br>
                 Kickmuit Middle School<br>
                 <br>
                 Mt.Hope High School
+
             </p>
 
 
@@ -103,8 +101,10 @@
         <!--footer - final section of page-->
         <div id="footer" class="border bg-main">
 
-            <a href="index.html" class="link">BACK TO HOME</a>
+            <a href="index.html" class="link">BACK TO HOME</a><br>
+            <img src="images/schools_validation.png" alt="schooling page validation of HTML code" style="width:50%">
 
         </div><!--/ #footer-->
 
     </div><!--/ #wrapper -->
+</body>

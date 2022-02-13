@@ -7,56 +7,47 @@
     <meta name="description" content="Week 3 bio assignment for SE-111, 2/4/2022">
     
     <title>W3 | Multi-Page Bio </title>
+    <!-- Hobbies -->
 
     <!--in-document styling to showcase id and class power-->
     <style>
-
+        div{
+            border:2px solid black; padding:12px;margin:10px
+        }
         h1 {
-
-            /*border:1px solid blue;*/
             text-align:center;
             color:rgb(0, 0, 0);
-
         }
         h2 {
             text-align:center;
             color:rgb(0, 0, 0);
         }
-
         .border {
-
             border:2px solid black;
             margin-bottom:10px;
         }
-
         #nav {
-
             border:2px solid rgb(0, 0, 0);
             text-align:center;
-            
         }
-
         #wrapper {
-
             width:900px;
             margin:auto;/*adds equal space to left and right sides, requires a width value applied*/
         }
-
         .bg-main {
-
             background-color:white;
         }
-
         .link {
-
             font-size:26px;
             text-decoration:none;
             margin-right:15px;
         }
-
         #footer {
 
             text-align:center;
+        }
+        body{
+            text-align: center;
         }
     </style>
 
@@ -66,15 +57,10 @@
     <!-- wrapper holds the entire page content-->
     <div id="wrapper">
 
-        <!--header is content that loads first/at top of page-->
-        <!--header is usually a banner image or logo-->
         <div id="header" class="border bg-main">
 
-            <!--name of the page-->
-            <h1 id="title">ABOUT PAGE</h1>
-            <!--h1 tags should only be used 1 time in a page-->
-
-
+            <h1 id="title">HOBBIES</h1>
+        
         </div><!--/ #header-->
 
         <!--navigaion bar, holds the links to other pages-->
@@ -88,24 +74,28 @@
 
         </div><!--/ #nav-->
 
-        <!--main page content -- this usualy changes from page to page-->
+       
         <div id="content" class="border">
             <h2>Hobbies</h2>
-            <ul style="text-align: center; font-size:20px">
+
+            <img src="images/hobbies_fin.jpeg" alt="Gear picture" style="width: 21.5%; ">
+            <p style="font-size:20px">
                 <!-- <li>Gamming</li> -->
                 Singing songs
                 <br>
+                <br>
                 Walking Outside
                 <br>
-                
+                <br>
                 Watching movies
+                <br>
                 <br>
                 Using tools to fix random stuff
                 <br>
-                
+                <br>
                 Annoying my parents/friends depends on the moood
-            
-            </ul>
+
+            </p>
 
 
         </div><!--/ #content-->
@@ -113,8 +103,10 @@
         <!--footer - final section of page-->
         <div id="footer" class="border bg-main">
 
-            <a href="index.html" class="link">BACK TO HOME</a>
+            <a href="index.html" class="link">BACK TO HOME</a><br>
+            <img src="images/Hobbies_validation.png" alt="Hobbies page validation of HTML code" style="width:50%">
 
         </div><!--/ #footer-->
 
     </div><!--/ #wrapper -->
+</body>

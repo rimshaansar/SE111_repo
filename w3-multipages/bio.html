@@ -7,6 +7,7 @@
     <meta name="description" content="Week 3 bio assignment for SE-111, 2/4/2022">
     
     <title>W3 | Multi-Page Bio </title>
+    <!-- BIO PAGE -->
 
     <!--in-document styling to showcase id and class power-->
     <style>
@@ -14,47 +15,30 @@
             border:2px solid black; padding:12px;margin:10px
         }
         h1 {
-
-            /*border:1px solid blue;*/
             text-align:center;
             color:rgb(0, 0, 0);
-
         }
-
         .border {
-
-            border:1px solid black;
-            margin-bottom:10px;
-            
+            border:2px solid black;
+            margin-bottom:10px;   
         }
-
         #nav {
-
-            border:1px solid rgb(0, 0, 0);
+            border:2px solid rgb(0, 0, 0);
             text-align:center;
-            
         }
-
         #wrapper {
-
             width:900px;
             margin:auto;/*adds equal space to left and right sides, requires a width value applied*/
         }
-
         .bg-main {
-
             background-color:white;
         }
-
         .link {
-
             font-size:26px;
             text-decoration:none;
             margin-right:15px;
         }
-
         #footer {
-
             text-align:center;
         }
         
@@ -62,18 +46,11 @@
 
 </head>
 <body style="background-color:rgb(192, 191, 191)">
-    
     <!-- wrapper holds the entire page content-->
     <div id="wrapper">
-
-        <!--header is content that loads first/at top of page-->
-        <!--header is usually a banner image or logo-->
         <div id="header" class="border bg-main">
 
-            <!--name of the page-->
             <h1 id="title">ABOUT ME!</h1>
-            <!--h1 tags should only be used 1 time in a page-->
-
 
         </div><!--/ #header-->
 
@@ -85,39 +62,38 @@
             <a href="schooling.html" class="link">SCHOOLS</a>
             <a href="hobbies.html" class="link">HOBBIES</a>
 
-
         </div><!--/ #nav-->
 
-        <!--main page content -- this usualy changes from page to page-->
+        <!--main page content this usualy changes from page to page-->
         <div id="content" class="border">
 
-            <img src="images/my_pic.jpg" alt="" style="width: 25%; float: right;">
+            <img src="images/bio_pg.jpeg" alt="My picture" style="width: 21.5%; float: right;">
 
-            <p style="font-size:20px">  
+            <p style="font-size:20px">
                 <br>
-                Hello World, my name is Rimsha Ansar and I am originally from <b>PAKISTAN</b>. I came here <br>6 years ago with my family. We live in Warren, Rhode Island.
+                Hello World, my name is Rimsha Ansar and I am originally from <b>PAKISTAN</b>. I came here 6 years ago with my family. We live in Warren, Rhode Island.
                 I am a multi-lingual. My first Language is urdu. I really love to use tools and fix electronics. My bestfriend's name is Fatima Sheikh, we first met in 
-                Middle School and we have been friends for over 5 years. I have 3 siblings, 2 sisters and one youngest brother.
+                Middle School and we have been friends for over 5 years. I have 3 siblings, 2 sisters and the youngest being the brother.
                 I am into mtorcycles. I also plan on doing <i>MASTERS</i> in cybersecurity, 
                 at <strong>New England Institute of Technology</strong>. I am really interested in the material that we are currently learning. 
                 <br>
                 <br>
             </p>
-    
-            
 
 
         </div><!--/ #content-->
+
         <div id="footer" class="border bg-main">
     
-            <a href="index.html" class="link">BACK TO HOME</a>
+            <a href="index.html" class="link">BACK TO HOME</a><br>
+            <img src="images/bio_validation.png" alt="BIO page validation of HTML code" style="width:50%">
 
         </div><!--/ #footer-->
 
         <!--footer - final section of page-->
     
     </div><!--/ #wrapper -->
-
+</body>
         
 
     
