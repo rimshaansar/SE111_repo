@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rimsha Ansar">
+    <meta name="description" content="Gross pay calculator">
+    <title>Pay Calculator | W6 SE111.22 </title>
+</head>
+<body>
+
+    <!--we shoooould have some sort of HTML in the document itself-->
+    <h1>W6 | Pay Calculator</h1>
+    
+
+    <!--IN-DOCUMENT JAVASCRIPT-->
+    <script>
+
+        var num //declaration only
+
+        num = 0 //assignment only - CANNOT happen before declaration
+        
+        //COMBINE DECLARATION & ASSIGNMENT
+        var name = prompt(`What is the name of the user? `)
+        var hour_rate = Number(prompt(`What is ${name}'s Hourly Pay: `))
+        var tax = 0.2 
+        var hours_worked = Number(prompt(`The number of hours ${name} worked in 2 weeks: `))
+        //BASIC PROCESSING WITH VARS - variable must be defined (assigned value) before it can be used
+        var gross_pay = hour_rate * hours_worked 
+
+        //OUTPUT - display; 2 types: one for testing, one for user
+        console.log(gross_pay) //for testing, var only displays stored value
+       
+        console.log(`The amount of money ${name} without tax is = ${gross_pay.toFixed(2)}`)
+        
+        alert(`The amount of money ${name} without tax = ${gross_pay.toFixed(2)}`)
+
+        console.log(`alert passed`)
+
+        var total_tax = gross_pay * tax
+
+        console.log(total_tax)
+        console.log(`The amount of tax applied to the gross pay is = ${total_tax.toFixed(2)}`)
+        alert(`the amount of tax applied to the gross pay is = ${total_tax.toFixed(2)}`)
+        console.log(`alert passed`)
+
+        var final_pay = gross_pay - total_tax
+
+        console.log(final_pay)
+
+        console.log(`The total net payment after the deductions is= ${final_pay.toFixed(2)}`)
+        alert(`The total payment after the deductions is= ${final_pay.toFixed(2)}`)
+        console.log(`alert passed`)
+        
+
+
+        
+        console.log(`Gross Pay= ${gross_pay.toFixed(2)}`)
+        console.log(`Uncle Sam's share=  ${total_tax.toFixed(2)}`)
+        console.log(`${name} Net Pay =  ${final_pay.toFixed(2)}`)
+
+        alert(`Gross Pay= ${gross_pay.toFixed(2)} \n Uncle Sam's share=  ${total_tax.toFixed(2)} \n ${name} Net Pay =  ${final_pay.toFixed(2)}`)
+
+        console.log(`alert passed`)
+
+
+
+
+
+        //INPUT - gain data directly from user via keyboard
+       
+        //if you need to use the data, store the prompt() return to a declared var
+
+        
+
+        
+
+
+        
+
+
+    </script>
+
+    
+</body>
+</html>
