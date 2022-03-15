@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W8 JS Demo</title>
+</head>
+<body>
+    <h1>W8 Demo | Javascript Arrays & Objects</h1>
+
+    <div id="output">
+
+    </div>
+    <!--In-Document JS below---------------------->
+    <script>
+        //create a populated (has data) array
+        var people = [
+           'Katie',     //people[0]
+           'Conner',    //people[1]
+           'Zach',      //people[2]
+           'Stephen',   //people[3]
+           'Cody',      //people[4]
+           'Amara',     //people[5]
+           'Olivia'     //people[6]
+        ]
+
+        console.log(people) //entire set of data values
+        console.log(people[3])//one value
+        console.log(`There are ${people.length} values in the 'people' array.`)
+        //could also write as:
+        //var people = [`Katie`, `Conner`, `Zach`, `Stephen`, `Cody`, `Amara`, `Olivia`]
+
+        //to create an empty array 
+        var newArray = []
+
+        //add further data to an existing array 
+        people[7] = 'Rimsha'
+
+        people.push('Mike') //now at people[8]
+
+        var name = 'James'
+        people.push(name)   //now at people[9]
+
+        console.log(people)
+
+        //create a parallel array
+        var colors = [
+            'grey',
+            'blue',
+            'red',
+            'green',
+            'black',
+            'turquoise',
+            'purple',
+            'n/a',
+            'n/a',
+            'n/a'
+        ]
+
+        console.log(`${people[5]}'s favorite color is ${colors[5]}`)
+
+        //process the arrays to print everyone's info
+        //PROCESS ARRAY - "FOR LOOP" (standard)
+        var classHTML = []
+        for(let index = 0; index < people.length; index++)
+        {
+            console.log(`#${index} : ${people[index]}'s favorite color is ${colors[index]}`)
+            classHTML.push(`SE111.22`)
+        }
+
+        //associative arrays - boooooooooo
+        var associativePeople = []
+        associativePeople[`teacher`] = 'Katie'
+        associativePeople[`student`] = 'Conner'
+
+        //2D ARRAYS 
+        var cars = []
+        cars[0] = [`MAKE`, `Ford`, `Chevy`, `Toyota`, `Honda`]
+        cars[1] = [`MODELS`, `F-150`, `Cavalier`, `Camry`, `Prelude`]
+        cars[2] = [`YEARS`, `2016`, `2006`, `1999`, `1994`]
+
+        console.log(`KT's favorite childhood car was a ${cars[1][4]}`)
+
+        //create a new OBJECT 
+        var person1 = {
+            first: `Katie`,
+            last: `Truchon`,
+            age: 32, 
+            hasPets: true,  
+            classes: [`SE111`, `VGD129`, `GMW251`],
+            pets: {dogs: [`George`, `Marlowe`], cats: [`Jack`], birds: []},
+            greeting: function(){alert(`hi there ${this.first} ${this.last}`)}   //how methods are made     
+        }
+
+        console.log(person1)    //entire object + all properties
+        console.log(person1.first)//specific property value of object
+        console.log(person1.classes[0])
+        console.log(person1.pets.dogs[0])
+
+        person1.father = `Marty`//add to an object
+        console.log(person1)
+        person1.pets.birds.push(`Tweetie`)
+        console.log(person1.pets.birds)
+
+        //call the method
+        person1.greeting()
+
+        var person2 = {
+            first: `Antonio`,
+            last: `Martinez`,
+            age: 34, 
+            hasPets: true,  
+            classes: [`SE111`],
+            pets: {dogs: [], cats: [`Tadej`], birds: []},
+            greeting: function(){alert(`hi there ${this.first} ${this.last}`)}   //how methods are made     
+        }
+
+        person2.greeting()
+
+        //process a singular object 
+        //objects use the FOR IN loop 
+        for(let key in person1)
+        {
+            console.log(`${key}: ${person1[key]}`)
+        }
+
+        //w8 assignment notes
+
+        //create an array populated with objects
+        var humans = [
+            person1,  //can populate with previously stored data
+            person2
+        ]
+
+        //create a new person3 object, then add it to the array
+        var person3 = {
+            first: `Cam`,
+            last: `Arbo`,
+            age: 28, 
+            hasPets: true,  
+            classes: [`SE111`],
+            pets: {dogs: [`Thor`, `Valkyrie`], cats: [], birds: []},
+            greeting: function(){alert(`hi there ${this.first} ${this.last}`)}   //how methods are made     
+        } 
+
+        humans.push(person3)
+
+        //create a new var to hold data that will be witten to the page 
+        var output = ``
+
+        //in order to process a data structure populated with data structures...we need LOOP-CEPTION!
+        for(let i = 0; i < humans.length; i++)
+        {//this loops us through the elements in the array (each element in it is an object)
+            output += `<h3>INFO FOR ${humans[i].first}:</h3>`
+
+            //add each value stored in object to the output
+            //this requires a FOR IN loop to loop through object properties
+            for(let key in humans[i])
+            {
+                output += `<p><b>${key.toUpperCase()}</b>: ${humans[i][key]}</p>`
+            }
+
+            output += `<hr>`
+
+        }
+
+        //write the new string to the HTML page
+        document.querySelector(`#output`).innerHTML = output
+
+    </script>
+</body>
+</html>
