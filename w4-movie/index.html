@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rimsha Ansar">
+    <meta name="description" content="Week 4 assignment for review on the favourite movie">
+    
+    <title> Despicable ME </title>
+    <!-- index page -->
+    
+    <!--in-document styling to showcase id and class power-->
+    <style>
+        div{
+            border:2px solid black; padding:.5px;margin:10px
+        }
+        h1 {
+            /*border:1px solid blue;*/
+            text-align:center;
+            color:rgb(0, 0, 0);
+        }
+        .border {
+            border:2px solid black;
+            margin-bottom:10px;
+            object-fit: contain
+        }
+        #nav {
+            border:2px solid rgb(0, 0, 0);
+            text-align:center; 
+        }
+        #wrapper {
+
+            width:1400px;
+            margin:auto;/*adds equal space to left and right sides, requires a width value applied*/
+        }
+        .bg-main {
+            background-color:white;
+        }
+        .link {
+            font-size:26px;
+            text-decoration:none;
+            margin-right:15px;
+        }
+        #footer {
+            text-align:center;
+        }
+
+    </style>
+
+</head>
+<body style="background-color:rgb(255, 255, 255)">
+    
+    <!-- wrapper holds the entire page content-->
+    <div id="container" class="info">
+        <h2><em>Despicable Me</em></h2>
+
+        <!--navigaion bar, holds the links to other pages-->
+        <div id="nav">
+
+            <a href="index.html" class="link">HOME</a>
+            <a href="cast.html" class="link">Cast</a>
+            <a href="review.html" class="link">Review</a>
+
+        </div><!--/ #nav-->
+
+        <h2>Home</h2>
+        <p>An aging villianious mastermind plans to steal the moon using 3 orphan girl, a crazy scientist, and his minions until he realizes what he actually wanted wasn't something that 
+            could be achieved that way.
+        </p>
+        <img src="images/poster_ok.jpg" alt="movie's poster" style="width: 50%;">
+        <br>
+        <br>
+        <hr>
+        <p>
+            <b>Release date:</b> July 9, 2010 <br>
+            <br>
+            <b>Rating:</b> PG<br>
+            <br>
+            <b>running time:</b> 1h 35m <br>
+            <br>
+            <b>Genre:</b> Animation, Adventure, Comedy<br>
+            <br>
+            <b>Company Credits:</b> Illumination, Universal Pictures, Chris Meledandri<br>
+            <br>
+        </p>
+        <!--footer - final section of page-->
+        <div id="footer" class="border bg-main">
+
+            <a href="index.html" class="link">BACK TO HOME</a><br>
+            <img src="images/home_page.jpeg" alt="Index page validation of HTML code" style="width:50%">
+
+        </div><!--/ #footer-->
+
+    </div><!--/ #wrapper -->
+</body>
